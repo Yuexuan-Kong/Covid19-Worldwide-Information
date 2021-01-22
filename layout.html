@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="info_perso.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css"/></link>
+<body >
+	<meta charset="utf-8">
+	<div class="header">
+		<h1>Coronavirus Covid-19 Dashboard</h1>
+	</div>
+	
+	<div id="wrap">
+	<div id="choice" >
+	<form id="form" onchange="myFunction()">
+		Map Type:<br>
+	<select id="choice1">
+  		<option value="slider_">Day by day change</option>
+  		<option value="_">Latest information</option>
+	</select>
+	Data to show:<br>
+	<select id="choice2">
+  		<option value="tt_cases">Total Cases</option>
+  		<option value="tt_deaths">Total Deaths</option>
+  		<option value="new_cases">Cases in the last 24h </option>
+  		<option value="new_deaths">Deaths in the last 24h</option>
+	</select>
+	</form>
+	</div>
+	<div id="show">
+		<iframe id="map" src="slider_new_cases.html" height="600" width="1200"scrolling="no" style="border:rgba(100,149,237,0.4));">	
+		</iframe>
+	</div>
+	</div>
+</body>
+<script>
+function myFunction() {
+  var x = document.getElementById("choice1").value;
+  var y = document.getElementById("choice2").value; 
+  document.getElementById("map").src = x+y+".html" ;
+}
+</script>
+
+
+
+</script>
